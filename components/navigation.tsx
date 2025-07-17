@@ -76,9 +76,6 @@ export function Navigation() {
             <Link href="/sell" className="transition-colors hover:text-foreground/80 text-foreground">
               Post
             </Link>
-            <Link href="/governance" className="transition-colors hover:text-foreground/80 text-foreground">
-              Community
-            </Link>
             <Link href="/profile" className="transition-colors hover:text-foreground/80 text-foreground">
               Profile
             </Link>
@@ -104,9 +101,6 @@ export function Navigation() {
               </Link>
               <Link href="/sell" className="hover:text-foreground/80">
                 Post
-              </Link>
-              <Link href="/governance" className="hover:text-foreground/80">
-                Community
               </Link>
               <Link href="/profile" className="hover:text-foreground/80">
                 Profile
