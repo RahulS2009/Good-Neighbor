@@ -138,6 +138,21 @@ export function Navigation() {
           <DialogHeader>
             <DialogTitle>Sign in with your school email</DialogTitle>
           </DialogHeader>
+          <Button
+            type="button"
+            className="w-full flex items-center justify-center gap-2 border border-input bg-white text-black hover:bg-gray-100 mb-4"
+            onClick={async () => {
+              setLoading(true);
+              setMessage("");
+              const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+              if (error) setMessage(error.message);
+              setLoading(false);
+            }}
+            disabled={loading}
+          >
+            <span style={{ fontSize: 18 }}>🔵</span> {/* Google icon placeholder */}
+            Continue with Google
+          </Button>
           <form onSubmit={handleSignIn} className="space-y-4">
             <Input
               type="email"
